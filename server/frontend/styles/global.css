@@ -1,0 +1,53 @@
+
+
+body{
+    background-color: #f1f1f1		;
+    color: black;
+}
+/*
+body{
+    background-color: #0D0221;#0D0221;
+    color: #C2E7D9; A6CFD5 - white
+}
+*/
+
+.form-control{
+    color: black;
+}
+
+.form-control:focus{
+    color: black;
+}
+
+#error-msg{
+    color: red;
+    text-align: center;
+}
+
+#success-msg{
+    color: #4BB543;
+    text-align: center;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    color: #0D0221;
+    /*background-color: rgb(216, 109, 52);*/
+    background-color: dodgerblue;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.notification:hover {
+  background-color: #0D0221;
+  color: dodgerblue;
+    transition: 0.5s;
+}
+
+option{
+    color: #0D0221;
+}

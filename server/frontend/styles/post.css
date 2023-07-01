@@ -1,0 +1,78 @@
+.card {
+   margin-left: 25%;
+   width: 50%;
+   border: 1px solid rgb(134, 119, 218);
+   border-radius: 10px;
+}
+
+.card .card {
+   margin-left: 5%;
+   width: 90%;
+}
+#father {
+   margin-top: 30px;
+   margin-bottom: 20px;
+}
+.second-body {
+   border-top: 1px solid rgb(134, 119, 218);
+}
+
+.second-body > div {
+   margin-top: 10px;
+}
+
+.card-header {
+   border-bottom: 1px solid rgb(134, 119, 218);
+}
+
+#imgpic {
+   height: 80px;
+   width: 80px;
+   border-radius: 50%;
+   /*background-color: blueviolet;*/
+}
+#profileinfo {
+   margin-left: 10px;
+}
+
+.option {
+   display: flex;
+   justify-content: center;
+}
+
+.number {
+   margin-top: 5px;
+   margin-left: 5px;
+}
+
+.commentpic {
+   height: 40px;
+   width: 40px;
+   border-radius: 50%;
+}
+
+.comment-content {
+   margin-left: 20px;
+   width: 100%;
+}
+
+.likeemoji img {
+   height: 10px;
+}
+
+.answerComment {
+   text-align: center;
+   margin-bottom: 10px;
+   cursor: pointer;
+}
+.modal-content{
+   background-color: #0D0221;
+   color: white;
+}
+ul {
+   list-style-type: none;
+}
+
+.comment-content{
+   max-width: 80%;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <link rel="icon" type="image/x-icon" href="../assets/ondafavicon.png">
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="../styles/global.css" />
+   </head>
+   <body>
+      <h1 id="error-msg"></h1>
+      <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const token = urlParams.get("token");
+         fetch("http://localhost:8000/auth/confirm/" + token, {
+            method: "GET",
+            headers: {
+               Accept: "application/json",
+               "Content-Type": "application/json",
+            },
+         })
+            .then((response) => response.json())
+            .then((response) => {
+               if(response.result){
+                window.location.href = "/frontend/html/signin.html"
+               }else{
+                document.getElementById("error-msg").innerHTML = response.error;
+               }
+            });
+      </script>
+   </body>
+</html>

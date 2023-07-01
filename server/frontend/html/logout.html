@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="../scripts/global.js"></script>
+<body onload="validateToken(false)">
+    <script>
+        localStorage.removeItem("token")
+        localStorage.removeItem("admin_token")
+        window.location.href = "signin.html"
+    </script>  
+</body>
+</html>

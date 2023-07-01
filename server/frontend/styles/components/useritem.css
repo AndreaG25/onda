@@ -1,0 +1,11 @@
+#items{
+    width: 50%;
+    margin-left: 25%;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.card{
+ border: transparent;
+}

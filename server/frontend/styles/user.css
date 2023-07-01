@@ -1,0 +1,59 @@
+.first-section {
+  margin-top: 20px;
+}
+*{
+  color: black;
+}
+#imgpic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.info {
+  margin-top: 30px;
+}
+
+.stats {
+  text-align: center;
+  font-size: 20px;
+}
+
+.actions > button {
+  margin: 11px 3px;
+}
+
+.col {
+  border: 1px solid white;
+}
+
+.card {
+  margin-left: 25%;
+  width: 50%;
+  border: 1px solid rgb(134, 119, 218);
+  border-radius: 10px;
+}
+
+.card-header {
+  border-bottom: 1px solid rgb(134, 119, 218);
+}
+
+.second-body {
+  border-top: 1px solid rgb(134, 119, 218);
+  padding-top: 10px;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+}
+
+.number {
+  margin-left: 5px;
+}
+
+.posts-section a {
+  margin-top: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}

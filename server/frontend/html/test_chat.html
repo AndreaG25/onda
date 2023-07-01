@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Chat</title>
+
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+         crossorigin="anonymous" />
+      <script
+         src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+         crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="../styles/global.css" />
+      <!--
+        <link rel="stylesheet" href="../styles/chat.css" /
+        >-->
+      <script src="../scripts/global.js"></script>
+      <style>
+         * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+         }
+
+         .container {
+            display: flex;
+            height: 100vh;
+         }
+
+         .chat-list {
+            width: 25%;
+            background-color: #0d0221;
+            color: #c2e7d9;
+            text-align: center;
+         }
+
+         .chat-list ul {
+            list-style: none;
+         }
+
+         .chat-list li {
+            cursor: pointer;
+            padding: 10px 0;
+            border: 1px solid white;
+         }
+
+         .chat-list li.active {
+            background-color: #c2e7d9;
+            color: #0d0221;
+         }
+
+         .message-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid white;
+         }
+
+         .message-header {
+            display: flex;
+            align-items: center;
+            height: 70px;
+            padding: 0 20px;
+            color: white;
+            border-bottom: 1px solid white;
+         }
+
+         .message-header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+         }
+
+         .message-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+         }
+
+         .message {
+            max-width: 50%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            word-wrap: break-word;
+         }
+
+         .message.mine {
+            align-self: flex-end;
+            background-color: #429ea6;
+            color: #c2e7d9;
+         }
+
+         .message.other {
+            align-self: flex-start;
+            background-color: #8d99ae;
+            color: #0d0221;
+         }
+      </style>
+   </head>
+   <body onload="verifyToken(false)">
+      <div class="container">
+         <div class="chat-list">
+            <ul id="chat-list-ul"></ul>
+         </div>
+         <div class="message-box">
+            <div class="message-header">
+               <img src="https://via.placeholder.com/50" id="profile-pic-chat" alt="Chat avatar" />
+               <h2 id="username-chat"></h2>
+            </div>
+            <div class="message-body" id="message-body">
+                <h1 style="text-align: center;">Seleziona una chat</h1>
+            </div>
+         </div>
+      </div>
+
+      <script src="../scripts/chat.js"></script>
+   </body>
+</html>

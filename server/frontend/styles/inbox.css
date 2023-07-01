@@ -1,0 +1,13 @@
+#requests-section{
+    width: 60%;
+    margin-left: 20%;
+}
+.card{
+    border: 1px solid black;
+}
+
+#profilepic{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
