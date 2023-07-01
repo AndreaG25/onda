@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+    <button onclick="sendMessage()">Invia messaggio</button>
+      <script>
+         const websocket = new WebSocket("ws://localhost:8765/");
+
+         websocket.onopen = function (event) {
+            const token = localStorage.token.split(' ')[1];
+            websocket.send(token);
+         };
+
+         websocket.onmessage = function (event) {
+            console.log(`Messaggio ricevuto dal server: ${event.data}`);
+         };
+
+         const sendMessage = (message) => {
+            if (websocket.readyState === WebSocket.OPEN) {
+               // Inviamo un messaggio solo se la connessione è stata stabilita correttamente
+               websocket.send(JSON.stringify(createMessage()));
+            } else {
+               console.log("La connessione non è ancora stata stabilita.");
+            }
+         };
+         const createMessage = () => {
+            const message = {
+            sender: 'sender',
+            recipient: 'user_u0fjizsk67devvikxafzlghhnzccpme1sj6y',
+            content: 'content',
+            date_creation: 'creation',
+            id_chat: 'id_chat'
+            };
+            return message
+         }
+      </script>
+   </body>
+</html>
